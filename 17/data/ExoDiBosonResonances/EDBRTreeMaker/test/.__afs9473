@@ -1,0 +1,22 @@
+CRAB project directory:		/afs/cern.ch/work/x/xulyu/private/Summer2017/VVV/ntuple/Xudong/Summer17/VVV_newid/2017/deepak8mc/CMSSW_9_4_11/src/ExoDiBosonResonances/EDBRTreeMaker/test/crab_WJetsToLNu_HT-1200To2500
+Task name:			191110_231357:xulyu_crab_WJetsToLNu_HT-1200To2500
+Grid scheduler - Task Worker:	crab3@vocms0120.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/191110_231357%3Axulyu_crab_WJetsToLNu_HT-1200To2500
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xulyu&var-task=191110_231357%3Axulyu_crab_WJetsToLNu_HT-1200To2500
+In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+Status on the scheduler:	COMPLETED
+
+Jobs status:                    finished     		100.0% (551/551)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Summary of run jobs:
+ * Memory: 2MB min, 2626MB max, 1410MB ave
+ * Runtime: 0:02:02 min, 2:03:34 max, 0:51:07 ave
+ * CPU eff: 19% min, 98% max, 96% ave
+ * Waste: 5:37:24 (1% of total)
+
+Log file is /afs/cern.ch/work/x/xulyu/private/Summer2017/VVV/ntuple/Xudong/Summer17/VVV_newid/2017/deepak8mc/CMSSW_9_4_11/src/ExoDiBosonResonances/EDBRTreeMaker/test/crab_WJetsToLNu_HT-1200To2500/crab.log

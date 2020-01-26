@@ -1,0 +1,14 @@
+CRAB project directory:		/afs/cern.ch/work/x/xulyu/private/Summer2017/VVV/ntuple/Xudong/Summer17/VVV_newid/2017/deepak8mc/CMSSW_9_4_11/src/ExoDiBosonResonances/EDBRTreeMaker/test/crab_TT_Hardonic_TuneCP5
+Task name:			191114_090156:xulyu_crab_TT_Hardonic_TuneCP5
+Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/191114_090156%3Axulyu_crab_TT_Hardonic_TuneCP5
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xulyu&var-task=191114_090156%3Axulyu_crab_TT_Hardonic_TuneCP5
+In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+Status on the scheduler:	SUBMITTED
+
+Jobs status:                    idle         		 94.1% (482/512)
+				unsubmitted  		  5.9% ( 30/512)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+Log file is /afs/cern.ch/work/x/xulyu/private/Summer2017/VVV/ntuple/Xudong/Summer17/VVV_newid/2017/deepak8mc/CMSSW_9_4_11/src/ExoDiBosonResonances/EDBRTreeMaker/test/crab_TT_Hardonic_TuneCP5/crab.log
