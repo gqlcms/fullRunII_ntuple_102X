@@ -4,8 +4,4 @@ cmsenv
 git cms-init
 git clone git@github.com:cms-jet/JetToolbox.git JMEAnalysis/JetToolbox -b jetToolbox_102X_v2
 
-#git cms-merge-topic lathomas:L1Prefiring_9_4_9
-cp -r /afs/cern.ch/user/x/xulyu/work/public/prefiring/CMSSW_9_4_9/src/L1Prefiring .
-cp L1Prefiring/EventWeightProducer/files/L1PrefiringMaps_new.root ExoDiBosonResonances/EDBRTreeMaker/test
-
 scram b -j 18

@@ -484,9 +484,9 @@ EDBRTreeMaker::EDBRTreeMaker(const edm::ParameterSet& iConfig):
     t1muSrc_      = consumes<edm::View<pat::Muon>>(iConfig.getParameter<edm::InputTag>( "t1muSrc") ) ;
 
     //  L1 prefiring
-    prefweight_token = consumes< double >(edm::InputTag("prefiringweight:NonPrefiringProb"));
-    prefweightup_token = consumes< double >(edm::InputTag("prefiringweight:NonPrefiringProbUp"));
-    prefweightdown_token = consumes< double >(edm::InputTag("prefiringweight:NonPrefiringProbDown"));
+    prefweight_token = consumes< double >(edm::InputTag("prefiringweight:nonPrefiringProb"));
+    prefweightup_token = consumes< double >(edm::InputTag("prefiringweight:nonPrefiringProbUp"));
+    prefweightdown_token = consumes< double >(edm::InputTag("prefiringweight:nonPrefiringProbDown"));
     
     // filter
     noiseFilterToken_ = consumes<edm::TriggerResults>(iConfig.getParameter<edm::InputTag>("noiseFilter"));
@@ -3021,6 +3021,7 @@ EDBRTreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
             double pycorr_newo= rawPy+TypeICorrMap_user_["corrEy_JEC"];
             double et_newo     = std::hypot(pxcorr_newo,pycorr_newo);
 	    MET_et_old=et_newo;
+	    //cout<<MET_corrPx<<" MET_corrPx "<<MET_corrPy<<"  MET_corrPy  "<<TypeICorrMap_user_["corrEx_JEC"]<<"   "<<TypeICorrMap_user_["corrEy_JEC"]<<endl;
             // Marked for debug
             //------------------central value, correction from JetuserDataak4---------------------
             double pxcorr_new= rawPx+TypeICorrMap_user_["corrEx_JEC"]+TypeICorrMap_user_["corrEx_JER"];

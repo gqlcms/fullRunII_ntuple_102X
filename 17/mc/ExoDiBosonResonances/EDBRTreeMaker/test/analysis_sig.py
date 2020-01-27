@@ -45,6 +45,7 @@ process.ApplyBaselineHBHEIsoNoiseFilter = cms.EDFilter('BooleanFlagFilter',
                                                        )
 process.load('RecoMET.METFilters.ecalBadCalibFilter_cfi')
 
+from PhysicsTools.PatUtils.l1ECALPrefiringWeightProducer_cfi import l1ECALPrefiringWeightProducer
 baddetEcallist = cms.vuint32(
     [872439604,872422825,872420274,872423218,
      872423215,872416066,872435036,872439336,
@@ -347,24 +348,15 @@ if runOnMC:
 	                                        jecAK4chsPayloadNames_JetUserData = cms.vstring( jecLevelsAK4chs ),
 	                                        vertex_JetUserData = cms.InputTag("offlineSlimmedPrimaryVertices"),
 	                                        )
-#L1 Prefiring
-process.prefiringweight = cms.EDProducer("L1ECALPrefiringWeightProducer",
-                                 ThePhotons = cms.InputTag("slimmedPhotons"),
-                                 TheJets = cms.InputTag("slimmedJets"),
-#                                L1Maps = cms.string(relBase+"/src/L1Prefiring/EventWeightProducer/files/L1PrefiringMaps_new.root"),
-                                # L1Maps = cms.string("L1PrefiringMaps_new.root"), # update this line with the location of this file
-                                L1Maps = cms.string("L1PrefiringMaps_new.root"),
-                                 DataEra = cms.string("2017BtoF"), #Use 2016BtoH for 2016
-                                 UseJetEMPt = cms.bool(False), #can be set to true to use jet prefiring maps parametrized vs pt(em) instead of pt
-                                 PrefiringRateSystematicUncty = cms.double(0.2) #Minimum relative prefiring uncty per object
-                                 )
 
-#from PhysicsTools.PatUtils.l1ECALPrefiringWeightProducer_cfi import l1ECALPrefiringWeightProducer
-#process.prefiringweight = l1ECALPrefiringWeightProducer.clone(
-#    DataEra = cms.string("2017BtoF"),   #("2016BtoH"), #Use 2016BtoH for 2016
-#    UseJetEMPt = cms.bool(False),
-#    PrefiringRateSystematicUncty = cms.double(0.2),
-#    SkipWarnings = False)
+#L1Prefiring
+from PhysicsTools.PatUtils.l1ECALPrefiringWeightProducer_cfi import l1ECALPrefiringWeightProducer
+process.prefiringweight = l1ECALPrefiringWeightProducer.clone(
+    DataEra = cms.string("2017BtoF"), #Use 2016BtoH for 2016
+    UseJetEMPt = cms.bool(False),
+    PrefiringRateSystematicUncty = cms.double(0.2),
+    SkipWarnings = False)
+
 process.treeDumper = cms.EDAnalyzer("EDBRTreeMaker",
                                     originalNEvents = cms.int32(1),
                                     crossSectionPb = cms.double(1),
